@@ -1,0 +1,28 @@
+{% extends 'class_records/base.html' %}
+
+{% block content %}
+     <div class="table-responsive">
+<table class="table table-striped table-hover">
+  <thead>
+        <tr>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Course</th>
+        </tr>
+  </thead>
+    <tbody>
+            {%  for student in students %}
+            <tr>
+                <th><a href="{% url 'class_records:student' student.id %}" class="nav-link" style="color:black">{{student.Last_name}}</a></th>
+                <th><a href="{% url 'class_records:student' student.id %}" class="nav-link" style="color:black">{{student.First_name}}</a></th>
+                <th><a href="{% url 'class_records:student' student.id %}" class="nav-link" style="color:black">{{student.Email}}</a></th>
+                <th><a href="{% url 'class_records:student' student.id %}" class="nav-link" style="color:black">{{student.Contact}}</a></th>
+                <th><a href="{% url 'class_records:student' student.id %}" class="nav-link" style="color:black">{{student.Course}}</a></th>
+            </tr>
+            {%  endfor %}
+    </tbody>
+</table>
+     </div>
+{% endblock %}

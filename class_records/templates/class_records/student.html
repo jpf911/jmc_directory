@@ -1,0 +1,17 @@
+{% extends 'class_records/base.html' %}
+
+
+{% block content %}
+    {% load static %}
+<div style="width: 500px; margin:50px auto">
+    <div style="text-align:center; padding-bottom:50px"><img src="{% static 'records/img_184513.png'%}" width="250" height="250">
+
+    <p>Last Name: {{student.Last_name}}</p>
+    <p>First Name: {{student.First_name}}</p>
+    <p>Email: {{student.Email}}</p>
+    <p>Contact: {{student.Contact}}</p>
+    <p>Address: {{student.Address}}</p>
+    <p>Course: {{student.Course}}</p>
+        </div>
+</div>
+{% endblock %}
